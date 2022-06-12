@@ -7,11 +7,11 @@ function Directors() {
       <h1>Directors Page</h1>
       {directors.map(director => (
         <div>
-          <h1>Name:{director.name}</h1>
+          <h1 key={director.index}>Name:{director.name}</h1>
           <ul>
             Movies:{' '}
             {director.movies.map(movie => (
-              <li>{movie}</li>
+              <li key={movie.index}>{movie}</li>
             ))}
           </ul>
         </div>
